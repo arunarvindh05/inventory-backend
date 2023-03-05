@@ -7,7 +7,7 @@ import { notFound, errorHandler } from './middleware/errorMiddleware.js'
 import userRoutes from './routes/userRoutes.js'
 import orderRoutes from './routes/orderRoutes.js'
 import uploadRoutes from './routes/uploadRoutes.js'
-const cors = require('cors');
+import cors from 'cors'
 
 dotenv.config()
 
