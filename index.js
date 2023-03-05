@@ -7,6 +7,7 @@ import { notFound, errorHandler } from './middleware/errorMiddleware.js'
 import userRoutes from './routes/userRoutes.js'
 import orderRoutes from './routes/orderRoutes.js'
 import uploadRoutes from './routes/uploadRoutes.js'
+const cors = require('cors');
 
 dotenv.config()
 
@@ -14,6 +15,7 @@ connectDB()
 
 const app = express()
 
+app.use(cors());
 app.use(express.json())
 
 app.get('/', (req, res) => {
